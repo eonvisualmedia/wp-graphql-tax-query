@@ -1,0 +1,26 @@
+{
+    "name": "eonvisualmedia/wp-graphql-tax-query",
+    "description": "Add tag queries to wp-graphql",
+    "type": "wordpress-plugin",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Michael Nightingale",
+            "email": "mnightingale@eon-media.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "WPGraphQL\\Extensions\\TaxQuery\\": "src/"
+        }
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {
+        "php": "^7.4|^8.0"
+    }
+}
