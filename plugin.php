@@ -4,7 +4,7 @@
  * Plugin URI: https://github.com/eonvisualmedia/wp-graphql-tax-query
  * Description: Adds tax_query to the wp-graphql plugin
  * Author: Eon Visual Media
- * Version: 1.0.1
+ * Version: 1.1.0
  *
  */
 
