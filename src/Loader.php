@@ -42,6 +42,11 @@ class Loader
 
             if (! empty($args['taxArray']) && is_array($args['taxArray'])) {
                 foreach ($args['taxArray'] as $value) {
+                    if (empty($value['terms'])) {
+                        // Skip if no terms set
+                        continue;
+                    }
+
                     $tax_query[] = [
                         'taxonomy' => $value['taxonomy'],
                         'field' => $value['field'],
@@ -58,7 +63,9 @@ class Loader
                     ];
                 }
 
-                $query_args['tax_query'] = $tax_query;
+                if (! empty($tax_query)) {
+                    $query_args['tax_query'] = $tax_query;
+                }
             }
         }
 
